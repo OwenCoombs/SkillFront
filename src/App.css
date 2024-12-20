@@ -1,15 +1,172 @@
-html {
-  height: 100%;
-}
+/* App.css */
+
+/* General Styles */
 body {
-  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
 }
-#root {
+
+.homepage {
   display: flex;
-  height: 100%;
   flex-direction: column;
-  justify-content: center;
+  height: 100vh;
 }
-#page-content {
-  flex-grow: 2;
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 60%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.2em;
+  margin: 20px 0 10px 20px;
+  color: #000000;
+}
+
+/* Categories */
+.categories {
+  padding: 10px;
+}
+
+.category-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 0 20px;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Providers */
+.featured {
+  padding: 10px;
+}
+
+.provider-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.provider-card {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.provider-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.provider-card .name {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.provider-card .job-title {
+  color: #777;
+  font-size: 0.8em;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 1em;
+}
+
+.footer-item:nth-child(1)::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/6/60/Simpleicons_Interface_home_white.svg'); /* Home icon */
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
+}
+
+.footer-item:nth-child(2)::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Simpleicons_Interface_magnifyingglass_white.svg'); /* Search icon */
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
+}
+
+.footer-item:nth-child(3)::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Simpleicons_Interface_user_white.svg'); /* Profile icon */
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
+}
+
+.footer-item:nth-child(4)::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/a/a3/Simpleicons_Interface_chatbubble_white.svg'); /* Message icon */
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
+}
+
+.footer-item:nth-child(5)::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Simpleicons_Interface_settings_white.svg'); /* Settings icon */
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
 }
