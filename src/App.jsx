@@ -1,13 +1,30 @@
 // App.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Logo from './assets/logo.svg'; // Adjust the path to your logo image
+import SplashScreen from './SplashScreen';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Display splash screen for 3 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SplashScreen />;
+  }
+
   return (
     <div className="homepage">
       {/* Header Section */}
       <header className="header">
-        <div className="logo">SkillConnect</div>
+        <div className="logo"><img src={Logo} alt="SkillConnect Logo" /></div>
         <input type="text" className="search-bar" placeholder="Search services..." />
       </header>
 

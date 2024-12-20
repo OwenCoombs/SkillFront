@@ -24,6 +24,11 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.logo img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -117,56 +122,24 @@ body {
   font-size: 0.8em;
 }
 
-/* Footer */
+/* Footer.css */
 .footer {
   display: flex;
   justify-content: space-around;
-  padding: 15px 0;
-  background-color: #000000;
-  color: #ffffff;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e7e7e7;
 }
 
 .footer-item {
   text-align: center;
-  font-size: 1em;
 }
 
-.footer-item:nth-child(1)::before {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/6/60/Simpleicons_Interface_home_white.svg'); /* Home icon */
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto 5px;
+.footer-item a {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
 }
 
-.footer-item:nth-child(2)::before {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Simpleicons_Interface_magnifyingglass_white.svg'); /* Search icon */
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto 5px;
-}
-
-.footer-item:nth-child(3)::before {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Simpleicons_Interface_user_white.svg'); /* Profile icon */
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto 5px;
-}
-
-.footer-item:nth-child(4)::before {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/a/a3/Simpleicons_Interface_chatbubble_white.svg'); /* Message icon */
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto 5px;
-}
-
-.footer-item:nth-child(5)::before {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Simpleicons_Interface_settings_white.svg'); /* Settings icon */
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto 5px;
+.footer-item a:hover {
+  color: inherit; /* Keep the color the same on hover */
 }

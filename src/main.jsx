@@ -15,19 +15,22 @@ import App from './App'
 import ErrorPage from './ErrorPage'
 import Header from './Header'
 import Footer from './Footer'
+import UserProfile from './UserProfile'
 
 
 function Layout() {
   return (
-      <>
-        <Header />
-        <div id='page-content'>
-          <Outlet />
-        </div>
-        <Footer />
-      </>
-  )
+    <>
+      <Header />
+      <div id="page-content">
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  );
 }
+
+export default Layout;
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/profile',
+        element: <UserProfile />
       },
     ]
   }
